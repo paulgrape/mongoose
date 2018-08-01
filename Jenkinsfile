@@ -20,7 +20,7 @@ pipeline {
 	}
 	post {
 		success {
-			tar -cvzf mongoose-base-3.6.0.tgz /**/*.jar
+			sh "tar -cvzf mongoose-base-3.6.0.tgz /**/*.jar"
 		}
 	}
 }
