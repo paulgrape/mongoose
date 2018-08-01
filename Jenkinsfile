@@ -19,9 +19,8 @@ pipeline {
 		}
 	}
 	post {
-		always {
-			archiveArtifacts artifacts: 'build/libs/**/*.tgz', fingerprint: true
-			junit 'build/reports/**/*.xml'
+		success {
+			archive "target/**/*"
 		}
 	}
 }
