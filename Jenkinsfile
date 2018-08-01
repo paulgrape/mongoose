@@ -20,7 +20,7 @@ pipeline {
 	}
 	post {
 		success {
-			archiveArtifacts "*"
+			tar -cvzf mongoose-base-3.6.0.tgz /**/*.jar
 		}
 	}
 }
