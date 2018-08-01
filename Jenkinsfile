@@ -21,6 +21,7 @@ pipeline {
 	post {
 		success {
 			sh "gradle dist"
+			archiveArtifacts artifacts: 'build/dist/**/*.tgz', fingerprint: true
 		}
 	}
 }
