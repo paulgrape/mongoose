@@ -20,7 +20,7 @@ pipeline {
 	}
 	post {
 		success {
-			archive "target/**/*"
+			archiveArtifacts "*"
 		}
 	}
 }
