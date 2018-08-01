@@ -17,11 +17,11 @@ pipeline {
 				//writeFile file: "output/usefulfile.txt", text: "This file is useful, need to archive it."				
 			}
 		}
-		post {
-			always {
-				archiveArtifacts artifacts: 'build/libs/**/*.tgz', fingerprint: true
-				junit 'build/reports/**/*.xml'
-			}
+	}
+	post {
+		always {
+			archiveArtifacts artifacts: 'build/libs/**/*.tgz', fingerprint: true
+			junit 'build/reports/**/*.xml'
 		}
 	}
 }
