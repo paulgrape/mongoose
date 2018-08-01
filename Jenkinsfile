@@ -11,7 +11,8 @@ pipeline {
 		//}
 		stage('build') {
 			steps {
-				sh 'gradle build' 
+				//sh 'gradle build'
+				sh "mkdir -p output"				
 			}
 		}
 	}
